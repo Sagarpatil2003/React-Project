@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Comfy Sloth — E-Commerce Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive e-commerce web application built for browsing, filtering, and buying furniture online. This project features a clean folder structure, global state management, and reliable third-party tools to handle secure user logins and payment checkouts.
 
-## Available Scripts
+🔗 **Live Deployment Link:** [https://react-project-two-amber.vercel.app/](https://react-project-two-amber.vercel.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📷 App Previews
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Home Page | Products Page (Filters) |
+|---|---|
+| ![Home Page](./Screenshots/home%20page.jpg) | ![Product Page](./Screenshots/Product.jpg) |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| About Page | Cart View |
+|---|---|
+| ![About Page](./Screenshots/about.jpg) | ![Cart Page](./Screenshots/add%20to%20cart.jpg) |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Features
 
-### `npm run build`
+* **Smart Filtering & Sorting:** Fast text search with filters for categories, companies, colors, price ranges, and shipping options.
+* **Secure Login:** Easy user authentication and signup flows handled safely using Auth0.
+* **Safe Checkout:** Complete shopping cart features integrated with the Stripe API to handle credit card payments securely.
+* **Beautiful Layout:** Responsive web pages built using Styled Components to look perfect on mobile phones, tablets, and desktop monitors.
+* **Protected Routes:** Built-in route guards that block access to the checkout pages unless a user is logged in.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack & Folder Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Frontend Framework:** React (v18)
+* **Styling:** Styled Components (CSS-in-JS)
+* **Routing:** React Router DOM (v6)
+* **State Management:** React Context API + `useReducer` to separate core logic from UI layouts
+* **Data Fetching:** Axios for external API connections
+* **Authentication:** Auth0 SDK
+* **Payments:** Stripe SDK & React Stripe JS
 
-### `npm run eject`
+### Project Folder Structure
+The source files are organized logically into clear directories:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+src/
+├── assets/         # Static imagery and media assets
+├── components/     # Reusable UI elements (Navbar, Cart, Sidebar, Filters, etc.)
+├── context/        # Global state provider configs (Products, Cart, User contexts)
+├── pages/          # Layout wrappers and view containers (Home, About, Checkout, etc.)
+├── reducers/       # Pure functions managing structured state transitions
+├── utils/          # Helper constants, data arrays, and API endpoint configs
+├── actions.js      # Centralized global string action variables
+├── App.js          # Core application route manager
+└── main.jsx        # Project configuration entry point
